@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sqili</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b225588609.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class = "container">
+        <nav>
+            <img src="Images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p> Software Developer </p>
+            <h1>Hi, my name is <br><span>Steven</span>. </h1>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class = "sub-title">About Me</h1>  
+                <p> Loren ipsum 
+
+                </p>
+                <div class="tab-titles">
+                    <div class="tab-links active-link" onclick="opentab('skills')">Skills</div>
+                    <div class="tab-links" onclick="opentab('experience')">Experience</div>
+                    <div class="tab-links" onclick="opentab('education')">Education</div>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>IPSum something</li>
+                        <li><span>Frameworks</span><br>IPSum something</li>
+                        <li><span>Developer Tools</span><br>IPSum something</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Languages</span><br>IPSum something</li>
+                        <li><span>Frameworks</span><br>IPSum something</li>
+                        <li><span>Developer Tools</span><br>IPSum something</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Languages</span><br>IPSum something</li>
+                        <li><span>Frameworks</span><br>IPSum something</li>
+                        <li><span>Developer Tools</span><br>IPSum something</li>
+                    </ul>
+                </div>
+
+           </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="projects">
+    <div class="container">
+        <h1 class = "sub-title"> My Projects </h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-land-mine-on"></i>
+                <h2><br>Minesweept</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Minesweept</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Minesweept</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left"></div>
+               
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            <div class="contact-right">
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab"); 
+        }
+        event.currentTarget.classList.add("active-link"); 
+        document.getElementById(tabname).classList.add("active-tab"); 
+
+    }
+</script>
+</body>
+</html>
